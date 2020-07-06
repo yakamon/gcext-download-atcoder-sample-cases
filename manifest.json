@@ -1,0 +1,17 @@
+{
+  "name": "download-atcoder-sample-cases",
+  "version": "0.0.0",
+  "description": "Google Chrome extension to download sample input on AtCoder question page.",
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://atcoder.jp/contests/*/tasks/*"],
+      "js": ["content/content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "download-atcoder-sample-cases",
+    "default_popup": "popup/popup.html"
+  },
+  "manifest_version": 2
+}
